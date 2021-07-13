@@ -1,28 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
-import { AlertComponent } from './_components/alert/alert.component';
-import { HomeComponent } from './home/home/home.component';
-import { AddEditComponent } from './users/add-edit/add-edit.component';
-import { LayoutComponent } from './users/layout/layout.component';
-import { ListComponent } from './users/list/list.component';
+import { AlertComponent } from './_components';
+import { HomeComponent } from './home';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AlertComponent,
-    HomeComponent,
-    AddEditComponent,
-    LayoutComponent,
-    ListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent,
+        AlertComponent,
+        HomeComponent
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        // provider used to create fake backend
+        fakeBackendProvider
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { };
