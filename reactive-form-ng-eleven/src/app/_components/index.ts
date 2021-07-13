@@ -1,2 +1,1 @@
-export class Index {
-}
+export * from './alert.component';
