@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
-]import { UserService } from '../_services/user.service';
+import { UserService } from '../_services/user.service';
 import { User } from '../_models/user.model';
 
+@Component({ templateUrl: 'list.component.html' })
+export class ListComponent implements OnInit {
+    users!: User[];
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styles: [
-  ]
-})
-export class HomeComponent implements OnInit {
     constructor(private userService: UserService) {}
 
     ngOnInit() {
