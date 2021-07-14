@@ -9,14 +9,14 @@
 ## Application Arhictecture: 
 ## note: index.ts is not required for each folder however is helpful in accessing features throughout the application.
   ### src
-    ### _components
-      ### alert
-      ### index
-    ### _models
-      ### user
-      ### role
-      ### alert
-      ### index
+    > _components
+      >> alert
+      >> index
+    > _models
+      >> user
+      >> role
+      >> alert
+      >> index
     >> _helpers
       >> error.interceptor
       >> fake-backend
