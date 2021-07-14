@@ -11,8 +11,8 @@ note: index.ts is not required for each folder however is helpful in accessing f
 app
   src
     _components
-      > alert
-      > index
+      - alert
+      - index
     _models
       > user
       > role
