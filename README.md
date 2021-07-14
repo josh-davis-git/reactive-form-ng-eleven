@@ -1,10 +1,10 @@
 # reactive-form-ng-eleven
 
-How to run this application?
->> clone repository
->> navigate to root folder (where package.json lives)
->> npm install
->> npm start
+# How to run this application?
+## clone repository
+## navigate to root folder (where package.json lives)
+## npm install
+## npm start
 
 # Application Arhictecture: 
 >> note: index.ts is not required for each folder however is helpful in accessing features throughout the application.
