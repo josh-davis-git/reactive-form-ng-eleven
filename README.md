@@ -10,7 +10,7 @@
 ## note: index.ts is not required for each folder however is helpful in accessing features throughout the application.
   ### src
     > _components
-      >> alert
+      >> alert 
       >> index
     > _models
       >> user
@@ -28,9 +28,9 @@
       >> index
     >> home component
     >> users
-      >> add-edit 
-      >> layout
-      >> list
+      >> add-edit component
+      >> layout component
+      >> list component
       >> user-routing.module
       >> user.module
     >> app-routing.moduel
